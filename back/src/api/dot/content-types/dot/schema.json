@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dots",
+  "info": {
+    "singularName": "dot",
+    "pluralName": "dots",
+    "displayName": "Dot",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "plot": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::plot.plot",
+      "inversedBy": "dots"
+    }
+  }
+}
