@@ -82,13 +82,13 @@ export default {
             body: JSON.stringify(this.modifiedData)
           }).then(this.checkStatus)
             .then(this.parseJSON);
-            console.log(response);
         } catch (error) {
           this.error = error
         }
       } else{
         alert('Вы забыли ввести данные')
       }
+      e.target.reset();
       
     },
     handleSubmitDots: async function(e) {
@@ -105,7 +105,7 @@ export default {
         } catch (error) {
           this.error = error
         }
-        console.log(JSON.stringify(this.modifiedDataDots));
+        
       } else{
         alert('Вы забыли ввести данные')
       }

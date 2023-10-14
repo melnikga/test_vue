@@ -20,7 +20,6 @@ export default {
             let plots = [];
             const response = await fetch("http://localhost:1337/api/plots?populate=dots").then(res => res.json());
             plots = response.data;
-            console.log(plots);
             
             const map = new mapboxgl.Map({
                 container: mapContainer.value, 
